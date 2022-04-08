@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+   
+    <div id="main" class="main">
+        <form class="form-main">
+            <div class="heading-title">
+                <div class="heading">
+                    <img class="images" />
+                    <h2 class="send-title">Hãy gửi CV của bạn cho chúng tôi</h2>
+                </div>
+                <span></span>
+                <div class="form-child">
+                    <div class="items">
+                        <label for="name">Tên của bạn</label>
+                        <input id="inputName"  type="text" name="fullName" placeholder="Họ và Tên" onchange="getName()" required/>
+                    </div>
+                    <div class="items">
+                        <label for="phone">Số điện thoại</label>
+                        <input id="inputPhone" type="tel" name="phone" placeholder="Số điện thoại liên lạc"
+                            onchange="getPhone()" required/>
+                    </div>
+                    <div class="items">
+                        <label for="position">Vị trí</label>
+                        <div class="selection">
+                            <select  id="position" class="position" name="phone" onchange="getPosition() " required > 
+                                <option value="Fresher">
+                                    Fresher Web Frontend Developer
+                                </option>
+                                <option value="Junior">Junior Web Frontend Developer</option>
+                                <option value="Senior">Senior Web Frontend Developer</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <label class="work" for="work">Kinh nghiệm <br />
+                            làm việc</label>
+                        <textarea onchange="getExperience()" name="work" id="work" cols="50" rows="10"
+                            placeholder="Kinh nghiệm làm việc" required></textarea>
+                    </div>
+                    <label class="items prove" for="inputId">
+                        <div class="images">
+                            <img src="./images/icon.png" />
+                            <p>Đính kèm hình ảnh</p>
+                        </div>
+                    </label>
+                    <input type="file" accept="image/*" id="inputId" onchange="handleChangeFiles()" required/>
+                    <div class="items">
+                        <label class="email" for="email">Email</label>
+                        <input onchange="getEmail()" id="emailId" type="email" name="email"
+                            placeholder="Ex: contact@freemind.vn" required/>
+                    </div>
+                    <div class="btn-main">
+                        <div class="btn btn-submit" id="submit" onclick="handleSubmit()">
+                            GỬI CV cho Freemind
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/javascript.js"></script>
+</body>
+
+</html>
